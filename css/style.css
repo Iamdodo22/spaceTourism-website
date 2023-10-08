@@ -84,6 +84,7 @@ a {
     padding-top: 10rem;
     padding-right: 15rem;
     display: none;
+    background: rgba(0, 0, 0, 0.5);
   }
 }
 .menu-bar li a {
