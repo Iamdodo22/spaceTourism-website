@@ -1,0 +1,130 @@
+#destination{
+    background: url(/starter-code/assets/destination/background-destination-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include response(tab-port){
+        background: url(/starter-code/assets/destination/background-destination-tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    @include response(tab-port){
+        background: url(/starter-code/assets/destination/background-destination-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;  
+    }
+    color: $color-white;
+    font-weight: 400;
+    font-family: $font-barlow;
+}
+
+main{
+    h1{
+        @include rowFlex;
+        letter-spacing: 1px;
+        margin-left: 15rem;
+        padding-block: 2rem;
+        span{
+            color: $color-gray;
+        }
+        @include response(tab-port){
+            margin-left: 3rem;
+        }
+    }
+}
+
+.destCon{
+    @include rowFlex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 10rem;
+    margin-top: 8rem;
+    @include response(tab-port){
+        flex-direction: column;
+        gap: 8rem;
+        margin-inline: 8rem;
+    }
+    @include response(phone){
+        margin-inline: 5rem;
+    }
+    
+    .items{
+        width: 40%;
+        @include response(tab-port){
+            width: 80%;
+        }
+        @include response(phone){
+            width: 100%;
+        }
+    }
+    &-main{
+        img{
+            width: 100%
+
+        }
+    }
+    &-sub{
+        @include colFlex;
+        font-weight: 400;
+        @include response(tab-port){
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        &--nav{
+            @include rowFlex($gap:2rem);
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            
+            li a{
+                padding-bottom: 1rem;
+                cursor: pointer;
+                color: $color-secondary;
+                &:hover{
+                    border-bottom: 4px solid $color-gray;
+
+                }
+            }
+        }
+        h2{
+            font-size: 10rem;
+            font-family: $font-bele;
+            text-transform: uppercase;
+            @include response(phone){
+                font-size: 5rem;
+                margin-top: 1rem;
+            }
+        }
+        p{
+            font-size: 1.8rem;
+            color: $color-secondary;
+        }
+        .sub-footer{
+            margin-top: 3rem;
+            width: 100%;
+            border-top: 1px solid $color-secondary;
+            letter-spacing: 1px;
+            &--items{
+                padding-top: 2rem;
+                @include rowFlex($gap:3rem);
+                @include response(tab-port){
+                    justify-content: center;
+                }
+                @include response(phone){
+                    flex-direction: column;
+                    align-items: center;
+                }
+                span{
+                    @include colFlex;
+                    h3{
+                        color: $color-secondary;
+                        font-size: 2.5rem;
+                    }
+                    p{
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}

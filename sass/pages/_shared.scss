@@ -1,0 +1,89 @@
+.header{
+    @include rowFlex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5rem;
+    margin-top: 3rem;
+    height: 8rem;
+    position: relative;
+    &-logo{
+        img{
+            width: 5rem;
+        }
+    }
+    @include response(phone){
+       margin-left: 3rem; 
+    }
+    
+}
+.menu-bar{
+    @include rowFlex($gap:3rem);
+    align-items: center;
+    font-size: 2rem;
+    font-family: $font-barlow;
+    padding-inline: 10rem;
+    background: rgba($color-gray, .2);
+    backdrop-filter: blur(5rem);
+    letter-spacing: 1px;
+    @include response(tab-port){
+        padding-inline: 3rem;
+    }
+    @include response(phone){
+        position: fixed;
+        width: 60%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        z-index: 199;
+        flex-direction: column;
+        padding-top: 10rem;
+        padding-right: 15rem;
+        display: none;
+    }
+    li a{
+        @include rowFlex;
+        padding-block: 3rem;
+        &:hover{
+            border-bottom: 4px solid $color-gray;
+        }
+        span{
+            color: $color-secondary;
+            @include response(tab-port){
+                display: none;
+            }
+            @include response(phone){
+                display: block;
+            }
+        }
+    }
+}
+.stroke{
+    width: 40%;
+    height: 1px;
+    background-color: $color-gray;
+    transform: translateX(5rem);
+    z-index: 10;
+    @include response(tab-port){
+        display: none;
+    }
+}
+.menuOpen{
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    z-index: 99;
+    display: none;
+    @include  response(phone){
+        display: block;
+    }
+}
+.menuClose{
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    z-index: 999;
+    display: none;
+    // @include  response(phone){
+    //     display: block;
+    // }
+}
