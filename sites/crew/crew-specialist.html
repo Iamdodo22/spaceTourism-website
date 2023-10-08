@@ -4,24 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body>
+<body id="crew">
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+  <header class="header">
+    <div class="header-logo">
+      <img src="/starter-code/assets/shared/logo.svg" alt="logo">
+    </div>
+  <div class="stroke">&nbsp;</div>
+    <ul class="menu-bar">
+      <li><a href="/index.html"><span>00</span> Home</a></li>
+      <li><a href="/sites/destination/destination-moon.html"><span> 01</span>Destination</a></li>
+      <li><a href="/sites/crew/crew-commander.html"><span>02</span>Crew</a></li>
+      <li><a href="/sites/technology/technology-vehicle.html"><span> 03</span> Technology</a></li>
+    </ul>
+  <img src="/starter-code/assets/shared/icon-hamburger.svg" alt="icon-hamburger"
+  class="menuOpen">
+  <img src="/starter-code/assets/shared/icon-close.svg" alt="icon-close" class="menuClose">
+  </header>
+  
+  <main>
+   
+    <h1 class="crew-h1"><span>02</span>Meet your crew</h1>
 
-  02 Meet your crew
+    <section class="crewCon">
 
-  Mission Specialist
-  Mark Shuttleworth
+      <div class="crewCon-left items">
+        <h2>Mission Specialist</h2>
+        <h3>Mark Shuttleworth</h3>
+        <p>Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
+          the Linux-based Ubuntu operating system. Shuttleworth became the first South 
+          African to travel to space as a space tourist.</p>
 
-  Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
-  the Linux-based Ubuntu operating system. Shuttleworth became the first South 
-  African to travel to space as a space tourist.
+          <ul class="crew-navBar">
+            <li><a href="/sites/crew/crew-commander.html">&nbsp;</a></li>
+            <li><a href="/sites/crew/crew-specialist.html">&nbsp;</a></li>
+            <li><a href="/sites/crew/crew-pilot.html">&nbsp;</a></li>
+            <li><a href="/sites/crew/crew-engineer.html">&nbsp;</a></li>
+          </ul>
+      </div>
+      <div class="crewCon-right items">
+        <img src="/starter-code/assets/crew/image-mark-shuttleworth.png" alt="">
+      </div>
+    </section>
+  </main>
+  
+   <script src="/script.js"></script>
 </body>
 </html>

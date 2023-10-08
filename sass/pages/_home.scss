@@ -32,6 +32,7 @@
         justify-content: center;
         gap: 8rem;
     }
+   
     @include response(phone-sm){
         margin-inline: 3rem;
     }
@@ -44,10 +45,14 @@
             text-align: center;
         }
         h2{
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             color: $color-secondary;
             white-space: nowrap;
             font-weight: 400;
+            text-transform: uppercase;
+            @include response(phone){
+                font-size: 2.8rem;
+            }
             @include response(phone-xs){
                 white-space: wrap;
             } 
@@ -57,8 +62,12 @@
             font-family: $font-bele;
             font-weight: 400;
             padding-bottom: 1rem;
-            @include response(phone-xs){
+            text-transform: uppercase;
+            @include response(phone){
                font-size: 10rem;
+            }
+            @include response(phone-xs){
+                font-size: 7rem;
             }
             @include response(phone-xxs){
                 font-size: 5rem;

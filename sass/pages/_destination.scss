@@ -22,6 +22,7 @@ main{
         @include rowFlex;
         letter-spacing: 1px;
         margin-left: 15rem;
+        text-transform: uppercase;
         padding-block: 2rem;
         span{
             color: $color-gray;
@@ -37,7 +38,8 @@ main{
     align-items: center;
     justify-content: space-between;
     margin-inline: 10rem;
-    margin-top: 8rem;
+    margin-block: 8rem;
+
     @include response(tab-port){
         flex-direction: column;
         gap: 8rem;
@@ -75,7 +77,14 @@ main{
             font-size: 2rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            
+            @include response(tab-port){
+                font-size: 3rem;
+                gap: 3rem;
+            }
+            @include response(phone){
+                font-size: 2.5rem;
+                gap: 2rem;
+            }
             li a{
                 padding-bottom: 1rem;
                 cursor: pointer;
@@ -90,6 +99,7 @@ main{
             font-size: 10rem;
             font-family: $font-bele;
             text-transform: uppercase;
+            font-weight: 400;
             @include response(phone){
                 font-size: 5rem;
                 margin-top: 1rem;
@@ -119,9 +129,11 @@ main{
                     h3{
                         color: $color-secondary;
                         font-size: 2.5rem;
+                        text-transform: uppercase;
                     }
                     p{
                         font-size: 1.8rem;
+                        text-transform: uppercase;
                     }
                 }
             }

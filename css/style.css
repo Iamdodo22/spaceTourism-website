@@ -44,6 +44,7 @@ a {
   margin-top: 3rem;
   height: 8rem;
   position: relative;
+  text-transform: uppercase;
 }
 .header-logo img {
   width: 5rem;
@@ -203,10 +204,16 @@ a {
   }
 }
 .cont-left h2 {
-  font-size: 3.2rem;
+  font-size: 3.5rem;
   color: #D0D6F9;
   white-space: nowrap;
   font-weight: 400;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 600px) {
+  .cont-left h2 {
+    font-size: 2.8rem;
+  }
 }
 @media only screen and (max-width: 400px) {
   .cont-left h2 {
@@ -218,10 +225,16 @@ a {
   font-family: "Bellefair", serif;
   font-weight: 400;
   padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 600px) {
+  .cont-left h3 {
+    font-size: 10rem;
+  }
 }
 @media only screen and (max-width: 400px) {
   .cont-left h3 {
-    font-size: 10rem;
+    font-size: 7rem;
   }
 }
 @media only screen and (max-width: 300px) {
@@ -309,6 +322,7 @@ main h1 {
   gap: 1rem;
   letter-spacing: 1px;
   margin-left: 15rem;
+  text-transform: uppercase;
   padding-block: 2rem;
 }
 main h1 span {
@@ -327,7 +341,7 @@ main h1 span {
   align-items: center;
   justify-content: space-between;
   margin-inline: 10rem;
-  margin-top: 8rem;
+  margin-block: 8rem;
 }
 @media only screen and (max-width: 900px) {
   .destCon {
@@ -378,6 +392,18 @@ main h1 span {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+@media only screen and (max-width: 900px) {
+  .destCon-sub--nav {
+    font-size: 3rem;
+    gap: 3rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .destCon-sub--nav {
+    font-size: 2.5rem;
+    gap: 2rem;
+  }
+}
 .destCon-sub--nav li a {
   padding-bottom: 1rem;
   cursor: pointer;
@@ -390,6 +416,7 @@ main h1 span {
   font-size: 10rem;
   font-family: "Bellefair", serif;
   text-transform: uppercase;
+  font-weight: 400;
 }
 @media only screen and (max-width: 600px) {
   .destCon-sub h2 {
@@ -432,9 +459,209 @@ main h1 span {
 .destCon-sub .sub-footer--items span h3 {
   color: #D0D6F9;
   font-size: 2.5rem;
+  text-transform: uppercase;
 }
 .destCon-sub .sub-footer--items span p {
   font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+#crew {
+  background: url(/starter-code/assets/crew/background-crew-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: "Barlow Condensed", sans-serif;
+}
+@media only screen and (max-width: 900px) {
+  #crew {
+    background: url(/starter-code/assets/crew/background-crew-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #crew {
+    background: url(/starter-code/assets/crew/background-crew-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+main .crew-h1 {
+  transform: translateY(4rem);
+  margin-bottom: 10rem;
+}
+@media only screen and (max-width: 1200px) {
+  main .crew-h1 {
+    transform: translateX(0);
+  }
+}
+
+.crewCon {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15rem;
+  margin-bottom: 10rem;
+}
+@media only screen and (max-width: 900px) {
+  .crewCon {
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: 8rem;
+    gap: 8rem;
+    margin-block: 5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .crewCon {
+    flex-direction: column-reverse;
+    margin-inline: 3rem;
+  }
+}
+.crewCon .items {
+  width: 40%;
+  font-weight: 400;
+}
+@media only screen and (max-width: 900px) {
+  .crewCon .items:not(:nth-child(2)) {
+    width: 100%;
+  }
+}
+.crewCon-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  justify-content: center;
+}
+@media only screen and (max-width: 900px) {
+  .crewCon-left {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+.crewCon-left h2 {
+  font-size: 5.5rem;
+  font-weight: 400;
+  color: #979797;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 600px) {
+  .crewCon-left h2 {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .crewCon-left h2 {
+    font-size: 2.5rem;
+  }
+}
+.crewCon-left h3 {
+  font-size: 6rem;
+  padding-bottom: 2rem;
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  white-space: nowrap;
+  text-transform: uppercase;
+  z-index: 3;
+}
+@media only screen and (max-width: 900px) {
+  .crewCon-left h3 {
+    white-space: wrap;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .crewCon-left h3 {
+    font-size: 4rem;
+    white-space: wrap;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .crewCon-left h3 {
+    font-size: 3rem;
+  }
+}
+.crewCon-left p {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: #D0D6F9;
+}
+@media only screen and (max-width: 600px) {
+  .crewCon-left p {
+    font-size: 2rem;
+  }
+}
+.crewCon-right img {
+  width: 100%;
+}
+
+.crew-navBar {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  padding-top: 10rem;
+}
+@media only screen and (max-width: 900px) {
+  .crew-navBar {
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .crew-navBar {
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.crew-navBar li {
+  width: 3rem;
+  height: 3rem;
+  background-color: #979797;
+  box-shadow: 0 0.5rem 1rem rgba(11, 13, 23, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.crew-navBar li a {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+#technology {
+  background: url(/starter-code/assets/technology/background-technology-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: "Barlow Condensed", sans-serif;
+}
+@media only screen and (max-width: 900px) {
+  #technology {
+    background: url(/starter-code/assets/technology/background-technology-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #technology {
+    background: url(/starter-code/assets/technology/background-technology-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

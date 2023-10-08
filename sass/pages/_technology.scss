@@ -1,0 +1,18 @@
+#technology{
+        background: url(/starter-code/assets/technology/background-technology-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include response(tab-port){
+            background: url(/starter-code/assets/technology/background-technology-tablet.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        @include response(tab-port){
+            background: url(/starter-code/assets/technology/background-technology-mobile.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;  
+        }
+        color: $color-white;
+        font-weight: 400;
+        font-family: $font-barlow;
+    }

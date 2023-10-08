@@ -1,0 +1,144 @@
+#crew{
+    background: url(/starter-code/assets/crew/background-crew-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include response(tab-port){
+        background: url(/starter-code/assets/crew/background-crew-tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    @include response(tab-port){
+        background: url(/starter-code/assets/crew/background-crew-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;  
+    }
+    color: $color-white;
+    font-weight: 400;
+    font-family: $font-barlow;
+}
+
+main{
+    .crew-h1{
+        transform: translateY(4rem);
+        margin-bottom: 10rem;
+        @include response(tab-land){
+            transform: translateX(0)
+        }
+    }
+}
+.crewCon{
+    @include rowFlex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15rem;
+    margin-bottom: 10rem;
+    @include response(tab-port){
+        flex-direction: column;
+        justify-content: center;
+        margin-inline: 8rem;
+        gap: 8rem;
+        margin-block: 5rem;
+    }
+    @include response(phone){
+        flex-direction: column-reverse;
+        margin-inline: 3rem;
+    }
+
+    .items{
+        width: 40%;
+        font-weight: 400;
+        @include response(tab-port){
+            &:not(:nth-child(2)){
+                width: 100%;
+            }
+        }
+    }
+    &-left{
+        @include colFlex;
+        position: relative;
+        justify-content: center;
+        @include response(tab-port){
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        h2{
+            font-size: 5.5rem;
+            font-weight: 400;
+            color: $color-gray;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            @include response(phone){
+                font-size: 3.5rem;
+                 
+             }
+             @include response(phone-sm){
+                font-size: 2.5rem; 
+             }
+        }
+        h3{
+            font-size: 6rem;
+            padding-bottom: 2rem;
+            font-family: $font-bele;
+            font-weight: 400;
+            white-space: nowrap;
+            text-transform: uppercase;
+            z-index: 3;
+            @include response(tab-port){
+                white-space: wrap;
+             }
+            @include response(phone){
+               font-size: 4rem; 
+               white-space: wrap;
+            }
+            @include response(phone-sm){
+                font-size: 3rem; 
+             }
+        }
+        p{
+            font-size: 2.5rem;
+            line-height: 3rem;
+            color: $color-secondary;
+            @include response(phone){
+                font-size: 2rem; 
+             }
+        }
+    }
+    &-right{
+        img{
+            width: 100%;
+        }
+    }
+}
+.crew-navBar{
+    @include rowFlex($gap:1.5rem);
+    padding-top: 10rem;
+
+    @include response(tab-port){
+        padding-top: 0;
+    }
+    @include response(phone){
+        position: absolute;
+        top: -3rem;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    li {
+        width: 3rem;
+        height: 3rem;
+        background-color: $color-gray;
+        box-shadow: 0 .5rem 1rem rgba($color-primary, .4);
+        border-radius: 50%;
+        cursor: pointer;
+        @include rowFlex;
+        justify-content: center;
+        align-items: center;
+        a{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+}
