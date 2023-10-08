@@ -16,3 +16,91 @@
         font-weight: 400;
         font-family: $font-barlow;
     }
+
+    .techCon{
+        @include rowFlex;
+        margin-left: 15rem;
+        align-items: center;
+        justify-content: space-between;
+        @include response(tab-port){
+            flex-direction: column-reverse;
+            margin-inline: 10rem;
+            gap: 10rem;
+        }
+        @include response(phone){
+            margin-inline: 4rem;
+        }
+
+        &-left{
+            position: relative;
+            @include rowFlex($gap:2rem);
+            width: 40%;
+            @include response(tab-port){
+            width: 100%;
+            text-align: center;
+            }
+            .techNav{
+               font-size: 2rem;
+               @include colFlex($gap:7rem);
+               @include response(tab-port){
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                flex-direction: row;
+                padding-bottom: 8rem;
+                    }
+               div{
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+                border: 1px solid $color-white;
+                @include rowFlex;
+                justify-content: center;
+                align-items: center;
+               } 
+            }
+            .content{
+                @include colFlex;
+
+                h2{
+                    font-size: 2rem;
+                    padding-bottom: 1rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    color: $color-secondary;
+                }
+                h3{
+                    font-size: 3rem;
+                    padding-bottom: 2rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+                p{
+                    font-size: 1.8rem;
+                    color: $color-secondary;
+                }
+            }
+        }
+        &-right{
+            @include response(tab-port){
+                width: 100vw;
+                    }
+            .none{
+                display: block;
+                @include response(tab-port){
+                    display: none;
+                    width: 100%;
+                }
+            }
+            .absolute{
+                top: 0;
+                left: 0;
+                display: none;
+                @include response(tab-port){
+            width: 100%;
+            display: block;
+                }
+            }
+        }
+    }
