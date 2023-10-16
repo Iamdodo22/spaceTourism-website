@@ -3,6 +3,8 @@
 const menuOpenBtn = document.querySelector('.menuOpen');
 const menuCloseBtn = document.querySelector('.menuClose');
 const menuBar = document.querySelector('.menu-bar');
+const home = document.querySelector('.home')
+const activePage = window.location.pathname;
 
 menuOpenBtn.addEventListener('click', (e)=>{
     menuBar.style.display='block';
@@ -15,17 +17,28 @@ menuCloseBtn.addEventListener('click', (e)=>{
     menuOpenBtn.style.opacity=1; 
 })
 
+// (function(){
+//     if(activePage === '/index.html'){
+//         home.classList.add('active')
+//     }
+// })()
 
 // menubar active link setting
 const menuBtn = document.querySelectorAll('.menu-bar li a');
-
-const activePage = window.location.pathname;
-
-menuBtn.forEach(link=>{
-    if(link.href.includes(`${activePage}`)){
-        link.classList.add('active')
-    }
+menuBtn.forEach(e=>{
+    e.addEventListener('click', event=>{
+       
+        event.classList.add('active')
+        e.classList.add('active')
+    })
 })
+
+// menuBtn.forEach(link=>{
+//     if(link.href.includes(`${activePage}`)){
+//         link.classList.add('active')
+//     }
+// })
+
 
 
 // destination active link setting
