@@ -20,6 +20,7 @@
     .techCon{
         @include rowFlex;
         margin-left: 15rem;
+        margin-bottom: 10rem;
         align-items: center;
         justify-content: space-between;
         @include response(tab-port){

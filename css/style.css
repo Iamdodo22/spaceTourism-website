@@ -680,6 +680,7 @@ main .crew-h1 {
   flex-direction: row;
   gap: 1rem;
   margin-left: 15rem;
+  margin-bottom: 10rem;
   align-items: center;
   justify-content: space-between;
 }
