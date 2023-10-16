@@ -26,6 +26,7 @@
     background: rgba($color-gray, .2);
     backdrop-filter: blur(5rem);
     letter-spacing: 1px;
+    
     @include response(tab-port){
         padding-inline: 3rem;
     }
@@ -40,7 +41,8 @@
         padding-top: 10rem;
         padding-right: 15rem;
         display: none;
-        background: rgba(black, .85)
+        background: rgba(black, .85);
+        transition: all .5s;
     }
     li a{
         @include rowFlex;
@@ -88,4 +90,8 @@
     // @include  response(phone){
     //     display: block;
     // }
+}
+
+.active{
+    border-bottom: 4px solid $color-white;
 }
