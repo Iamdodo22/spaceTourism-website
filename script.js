@@ -3,7 +3,6 @@
 const menuOpenBtn = document.querySelector('.menuOpen');
 const menuCloseBtn = document.querySelector('.menuClose');
 const menuBar = document.querySelector('.menu-bar');
-const home = document.querySelector('.home')
 const activePage = window.location.pathname;
 
 menuOpenBtn.addEventListener('click', (e)=>{
@@ -25,21 +24,16 @@ menuCloseBtn.addEventListener('click', (e)=>{
 
 // menubar active link setting
 const menuBtn = document.querySelectorAll('.menu-bar li a');
-menuBtn.forEach(e=>{
-    e.addEventListener('click', event=>{
-       
-        event.classList.add('active')
-        e.classList.add('active')
-    })
+
+
+menuBtn.forEach(link=>{
+   if(link.href.includes(`${activePage}`) && activePage !== '/'){
+    
+    link.classList.add('active')
+
+}
 })
-
-// menuBtn.forEach(link=>{
-//     if(link.href.includes(`${activePage}`)){
-//         link.classList.add('active')
-//     }
-// })
-
-
+console.log(activePage)
 
 // destination active link setting
 const destNav = document.querySelectorAll('.destCon-sub--nav li a')
